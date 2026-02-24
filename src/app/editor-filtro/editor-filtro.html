@@ -1,15 +1,29 @@
 <div class="card-grafica">
     <div class="canvas-preview">
         <img [style.filter]="filtroScss()"
-            src="https://www.lavanguardia.com/files/article_main_microformat/uploads/2019/12/11/5fa5316a6d007.png"
-            alt="Imagen Proceso">
+            src="https://www.civitatis.com/blog/wp-content/uploads/2022/11/calle-akihabara-tokio.jpg"
+            alt="Imagen Proceso" width="50%" height="50%">
         <div class="controles">
             <label> brillo : {{brillo()}}</label>
             <input type="range" min="0" max="200" (input)="actualizar('brillo', $event)">
             <label> contraste : {{contraste()}}</label>
-            <input type="range" min="0" max="200" (input)="actualizar('contraste', $event)">
+            <input type="range" min="0" max="400" (input)="actualizar('contraste', $event)">
             <label> pixel : {{blur()}}</label>
             <input type="range" min="0" max="20" (input)="actualizar('blur', $event)">
+            <br>
+            <label> sepia : {{sepia()}}</label>
+            <input type="range" min="0" max="200" (input)="actualizar('sepia', $event)">
+            <label> saturacion : {{saturacion()}}</label>
+            <input type="range" min="0" max="200" (input)="actualizar('saturacion', $event)">
+            <label> rotacion de color : {{hueRotate()}}</label>
+            <input type="range" min="0" max="360" (input)="actualizar('hueRotate', $event)">
+            <br>
+            <label> escala de grises : {{escalaDeGrises()}}</label>
+            <input type="range" min="0" max="100" (input)="actualizar('escalaDeGrises', $event)">
+            <label> invertir : {{invertir()}}</label>
+            <input type="range" min="0" max="100" (input)="actualizar('invertir', $event)">
+            <label> opacidad : {{opacidad()}}</label>
+            <input type="range" min="0" max="100" (input)="actualizar('opacidad', $event)">
         </div>
     </div>
 </div>
